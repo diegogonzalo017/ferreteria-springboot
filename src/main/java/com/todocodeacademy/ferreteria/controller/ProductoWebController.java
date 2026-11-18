@@ -77,7 +77,7 @@ public class ProductoWebController {
 
     }
 
-    @GetMapping("/editar/{codProd}")
+    @GetMapping("/editar/{id}")
     public String mostrarFormularioEditar(
             @PathVariable Long id,
             Model model) {
@@ -94,7 +94,7 @@ public class ProductoWebController {
         return "productos/formulario";
     }
 
-    @PostMapping("/eliminar/{codProd}")
+    @PostMapping("/eliminar/{id}")
     public String eliminarproducto(@PathVariable Long id) {
 
         prodServ.deleteProducto(id);
